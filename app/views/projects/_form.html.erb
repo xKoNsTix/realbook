@@ -1,0 +1,39 @@
+<div class="container">
+  <%= form_with(model: project, html: { class: "needs-validation", novalidate: true }) do |form| %>
+
+    <%# <%= render "shared/errors", object: project %>
+
+    <div class="mb-3">
+      <%= form.label :adress, class: "form-label" %>
+      <%= form.text_field :adress, autofocus: true, class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :date, class: "form-label" %>
+      <%= form.datetime_select :date, class: "form-select" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :size, class: "form-label" %>
+      <%= form.number_field :size, class: "form-control" %>
+    </div>
+
+    <div class="mb-3 form-check">
+      <%= form.check_box :photo, class: "form-check-input" %>
+      <%= form.label :photo, class: "form-check-label" %>
+    </div>
+
+    <div class="mb-3 form-check">
+      <%= form.check_box :video, class: "form-check-input" %>
+      <%= form.label :video, class: "form-check-label" %>
+    </div>
+
+    <div class="mb-3 form-check">
+      <%= form.check_box :drone, class: "form-check-input" %>
+      <%= form.label :drone, class: "form-check-label" %>
+    </div>
+
+    <%= form.submit class: "btn btn-primary" %>
+
+  <% end %>
+</div>

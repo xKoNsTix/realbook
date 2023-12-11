@@ -2,16 +2,16 @@
   <nav>
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <%= link_to 'Projects', projects_path, class: 'nav-link active' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to 'Link', projects_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <%= link_to 'Another Link', projects_path, class: 'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        <%= link_to 'Disabled', '#', class: 'nav-link disabled', tabindex: '-1', 'aria-disabled': 'true' %>
       </li>
     </ul>
   </nav>

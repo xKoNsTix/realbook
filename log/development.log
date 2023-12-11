@@ -2035,3 +2035,1101 @@ Processing by ProjectsController#show as HTML
 Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.7ms | Allocations: 8397)
 
 
+Started GET "/projects/1" for 127.0.0.1 at 2023-12-11 13:43:34 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 310)
+  Rendered shared/_header.html.erb (Duration: 0.7ms | Allocations: 120)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 6942)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 8402)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2023-12-11 13:43:54 +0100
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb
+  Rendering /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb [46 times] (Duration: 6.8ms | Allocations: 7261)
+  Rendered /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionpack-7.0.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 0.9ms | Allocations: 884)
+  Rendered /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 13.0ms | Allocations: 12533)
+  Rendered layout /Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/layouts/application.html.erb (Duration: 13.6ms | Allocations: 12810)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 13522)
+
+
+Started GET "/rails/info/routes?path=pro" for 127.0.0.1 at 2023-12-11 13:43:56 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"pro"}
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 2272)
+
+
+Started GET "/rails/info/routes?path=project" for 127.0.0.1 at 2023-12-11 13:43:57 +0100
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"project"}
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 892)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2023-12-11 13:47:52 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 324)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 120)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 17598)
+Completed 200 OK in 18ms (Views: 13.5ms | ActiveRecord: 0.5ms | Allocations: 22266)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:47:55 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1269)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1579)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
+
+<h2><% link_to 'Create new Project' new_project_path %></h2>
+
+):
+1:    <h1>All Projects Listed</h1>
+2:    <ul class="list-group">
+3:        <% @projects.each do |p| %>
+4:            <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+5:        <% end%>
+6:    </ul>
+7:    
+8:    <h2><% link_to 'Create new Project' new_project_path %></h2>
+  
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting `end' or dummy end
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting `end' or dummy end
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:48:27 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1270)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2072)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
+
+<h2><%= link_to 'Create new Project' new_project_path %></h2>
+
+):
+1:    <h1>All Projects Listed</h1>
+2:    <ul class="list-group">
+3:        <% @projects.each do |p| %>
+4:            <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+5:        <% end%>
+6:    </ul>
+7:    
+8:    <h2><%= link_to 'Create new Project' new_project_path %></h2>
+  
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:48:40 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1182)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1271)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2074)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
+
+<%= link_to 'Create new Project' new_project_path %>
+
+):
+1:    <h1>All Projects Listed</h1>
+2:    <ul class="list-group">
+3:        <% @projects.each do |p| %>
+4:            <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+5:        <% end%>
+6:    </ul>
+7:    
+8:    <%= link_to 'Create new Project' new_project_path %>
+  
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:48:42 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1258)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1505)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
+
+<%= link_to 'Create new Project' new_project_path %>
+
+):
+1:    <h1>All Projects Listed</h1>
+2:    <ul class="list-group">
+3:        <% @projects.each do |p| %>
+4:            <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+5:        <% end%>
+6:    </ul>
+7:    
+8:    <%= link_to 'Create new Project' new_project_path %>
+  
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:49:03 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 1182)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 1271)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2073)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
+
+<%= link_to 'Create new Project' new_project_path(@project) %>
+
+):
+1:    <h1>All Projects Listed</h1>
+2:    <ul class="list-group">
+3:        <% @projects.each do |p| %>
+4:            <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+5:        <% end%>
+6:    </ul>
+7:    
+8:    <%= link_to 'Create new Project' new_project_path(@project) %>
+  
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+app/views/projects/index.html.erb:8: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 13:49:28 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1000)
+  Rendered shared/_header.html.erb (Duration: 0.6ms | Allocations: 120)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 7638)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 8463)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 13:49:30 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 106)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6005)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 6369)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 13:59:01 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.9ms | Allocations: 1760)
+  Rendered projects/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2001)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 2089)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2899)
+
+
+  
+ActionView::Template::Error (Missing partial shared/_errors with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/Users/stjep/Sites/realbook/app/views"
+  * "/Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/turbo-rails-1.5.0/app/views"
+  * "/Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actiontext-7.0.8/app/views"
+  * "/Users/stjep/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/actionmailbox-7.0.8/app/views"
+):
+    1: <%= form_with(model: project) do |form| %>
+    2: 
+    3:     <%= render "shared/errors", object: project %>
+    4: 
+    5:     <%= form.label :adress %>
+    6:     <%= form.text_field :adress , autofocus: true %>
+  
+app/views/projects/_form.html.erb:3
+app/views/projects/_form.html.erb:1
+app/views/projects/new.html.erb:3
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 13:59:19 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 22.3ms | Allocations: 12130)
+  Rendered projects/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 12365)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 18783)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 19616)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:02:16 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.6ms | Allocations: 5909)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 6144)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 12546)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 13381)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:03:34 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 0.8ms | Allocations: 1460)
+  Rendered projects/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1700)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1789)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2601)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: project) do |form| %>
+
+    <%# <%= render "shared/errors", object: project %>
+
+    <div class="form-group">
+        <%= form.label :adress %>
+        <%= form.text_field :adress , autofocus: true, {class: "form-control"} %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :date %>
+        <%= form.datetime_select :date, {ampm: true}, {class: "datetime form-control"} %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :size %>
+        <%= form.number_field :size, {class: "form-control"}%>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :photo %>
+        <%= form.check_box :photo, {class: "form-control"} %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :video %>
+        <%= form.check_box :video, {class: "form-control"} %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :drone %>
+        <%= form.check_box :drone, {class: "form-control"} %>
+    </div>
+
+    <%= form.submit %>
+
+<% end %>
+):
+1:    <%= form_with(model: project) do |form| %>
+2:    
+3:        <%# <%= render "shared/errors", object: project %>
+4:    
+5:        <div class="form-group">
+6:            <%= form.label :adress %>
+7:            <%= form.text_field :adress , autofocus: true, {class: "form-control"} %>
+8:        </div>
+9:    
+10:        <div class="form-group">
+11:            <%= form.label :date %>
+12:            <%= form.datetime_select :date, {ampm: true}, {class: "datetime form-control"} %>
+13:        </div>
+14:    
+15:        <div class="form-group">
+16:            <%= form.label :size %>
+17:            <%= form.number_field :size, {class: "form-control"}%>
+18:        </div>
+19:    
+20:        <div class="form-group">
+21:            <%= form.label :photo %>
+22:            <%= form.check_box :photo, {class: "form-control"} %>
+23:        </div>
+24:    
+25:        <div class="form-group">
+26:            <%= form.label :video %>
+27:            <%= form.check_box :video, {class: "form-control"} %>
+28:        </div>
+29:    
+30:        <div class="form-group">
+31:            <%= form.label :drone %>
+32:            <%= form.check_box :drone, {class: "form-control"} %>
+33:        </div>
+34:    
+35:        <%= form.submit %>
+36:    
+37:    <% end %>
+  
+app/views/projects/_form.html.erb:7: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:7: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:7: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:7: syntax error, unexpected ')', expecting =>
+app/views/projects/new.html.erb:3
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:05:42 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 0.4ms | Allocations: 1460)
+  Rendered projects/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1697)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1786)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2595)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: project) do |form| %>
+
+    <%# <%= render "shared/errors", object: project %>
+
+    <div class="form-group">
+        <%= form.label :adress %>
+        <%= form.text_field :adress, class: "form-control" , autofocus: true %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :date %>
+        <%= form.datetime_select :date, class: "datetime form-control", {ampm: true} %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :size %>
+        <%= form.number_field :size, class: "form-control"%>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :photo %>
+        <%= form.check_box :photo, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :video %>
+        <%= form.check_box :video, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+        <%= form.label :drone %>
+        <%= form.check_box :drone, class: "form-control" %>
+    </div>
+
+    <%= form.submit %>
+
+<% end %>
+):
+1:    <%= form_with(model: project) do |form| %>
+2:    
+3:        <%# <%= render "shared/errors", object: project %>
+4:    
+5:        <div class="form-group">
+6:            <%= form.label :adress %>
+7:            <%= form.text_field :adress, class: "form-control" , autofocus: true %>
+8:        </div>
+9:    
+10:        <div class="form-group">
+11:            <%= form.label :date %>
+12:            <%= form.datetime_select :date, class: "datetime form-control", {ampm: true} %>
+13:        </div>
+14:    
+15:        <div class="form-group">
+16:            <%= form.label :size %>
+17:            <%= form.number_field :size, class: "form-control"%>
+18:        </div>
+19:    
+20:        <div class="form-group">
+21:            <%= form.label :photo %>
+22:            <%= form.check_box :photo, class: "form-control" %>
+23:        </div>
+24:    
+25:        <div class="form-group">
+26:            <%= form.label :video %>
+27:            <%= form.check_box :video, class: "form-control" %>
+28:        </div>
+29:    
+30:        <div class="form-group">
+31:            <%= form.label :drone %>
+32:            <%= form.check_box :drone, class: "form-control" %>
+33:        </div>
+34:    
+35:        <%= form.submit %>
+36:    
+37:    <% end %>
+  
+app/views/projects/_form.html.erb:12: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:12: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:12: syntax error, unexpected ')', expecting =>
+app/views/projects/_form.html.erb:12: syntax error, unexpected ')', expecting =>
+app/views/projects/new.html.erb:3
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:06:20 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.1ms | Allocations: 5991)
+  Rendered projects/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 6226)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 12643)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 13474)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:07:44 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.9ms | Allocations: 5974)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 6209)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 12611)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 13442)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:07:46 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ProjectsController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:07:46 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.6ms | Allocations: 5529)
+  Rendered projects/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 5591)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 11258)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 11535)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:08:26 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.8ms | Allocations: 6003)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 6238)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 119)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 12657)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 13489)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:09:52 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.4ms | Allocations: 6034)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 6269)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 12677)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 13513)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:09:53 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.0ms | Allocations: 5557)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 5619)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 11273)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 11549)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:10:14 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.4ms | Allocations: 5978)
+  Rendered projects/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 6218)
+  Rendered shared/_header.html.erb (Duration: 2.2ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 12628)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 13463)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:10:48 +0100
+Processing by ProjectsController#new as */*
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.1ms | Allocations: 5370)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 5434)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 14931)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 15562)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:12:00 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.2ms | Allocations: 5892)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 6127)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 12529)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 13360)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:13:46 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 2.7ms | Allocations: 6061)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 6301)
+  Rendered shared/_header.html.erb (Duration: 0.5ms | Allocations: 118)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 12711)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 13547)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:14:46 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for ProjectsController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:14:46 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.8ms | Allocations: 5566)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 5628)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 11295)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 11570)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:15:35 +0100
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"adress"=>"sadf", "date(1i)"=>"2023", "date(2i)"=>"12", "date(3i)"=>"11", "date(4i)"=>"13", "date(5i)"=>"14", "size"=>"", "photo"=>"0", "video"=>"0", "drone"=>"0"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 758)
+
+
+  
+RuntimeError ():
+  
+app/controllers/projects_controller.rb:16:in `create'
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:19:16 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 3098)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 19756)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 20877)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:19:18 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 666)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6543)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 6811)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:19:19 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 5.4ms | Allocations: 5639)
+  Rendered projects/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 5703)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 11362)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 11651)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:19:32 +0100
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"adress"=>"asdfsadf", "date(1i)"=>"2023", "date(2i)"=>"12", "date(3i)"=>"16", "date(4i)"=>"16", "date(5i)"=>"00", "size"=>"300", "photo"=>"1", "video"=>"1", "drone"=>"0"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mProject Create (0.7ms)[0m  [1m[32mINSERT INTO "projects" ("adress", "date", "size", "video", "drone", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["adress", "asdfsadf"], ["date", "2023-12-16 16:00:00"], ["size", 300], ["video", 1], ["drone", 0], ["photo", 1], ["created_at", "2023-12-11 13:19:32.071146"], ["updated_at", "2023-12-11 13:19:32.071146"]]
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 2.2ms | Allocations: 4004)
+
+
+  
+NoMethodError (undefined method `event_path' for #<ProjectsController:0x00000000032438>):
+  
+app/controllers/projects_controller.rb:18:in `create'
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:19:51 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 1.9ms | Allocations: 5688)
+  Rendered projects/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 5755)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 22179)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 25728)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:20:06 +0100
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"adress"=>"asdfasdfasdf", "date(1i)"=>"2023", "date(2i)"=>"12", "date(3i)"=>"16", "date(4i)"=>"00", "date(5i)"=>"00", "size"=>"33", "photo"=>"1", "video"=>"1", "drone"=>"1"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mProject Create (0.3ms)[0m  [1m[32mINSERT INTO "projects" ("adress", "date", "size", "video", "drone", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["adress", "asdfasdfasdf"], ["date", "2023-12-16 00:00:00"], ["size", 33], ["video", 1], ["drone", 1], ["photo", 1], ["created_at", "2023-12-11 13:20:06.095381"], ["updated_at", "2023-12-11 13:20:06.095381"]]
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/projects/3
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms | Allocations: 2853)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-12-11 14:20:06 +0100
+Processing by ProjectsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 307)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 6248)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 7366)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-12-11 14:20:15 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 5968)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.2ms | Allocations: 6867)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:20:19 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 832)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 6735)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 7007)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:20:34 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 3.2ms | Allocations: 5576)
+  Rendered projects/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 5638)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 11292)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 11569)
+
+
+Started POST "/projects" for 127.0.0.1 at 2023-12-11 14:20:53 +0100
+Processing by ProjectsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "project"=>{"adress"=>"DDDDDDDDDDDD", "date(1i)"=>"2025", "date(2i)"=>"2", "date(3i)"=>"2", "date(4i)"=>"01", "date(5i)"=>"01", "size"=>"300000", "photo"=>"1", "video"=>"1", "drone"=>"1"}, "commit"=>"Create Project"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mProject Create (0.6ms)[0m  [1m[32mINSERT INTO "projects" ("adress", "date", "size", "video", "drone", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["adress", "DDDDDDDDDDDD"], ["date", "2025-02-02 01:01:00"], ["size", 300000], ["video", 1], ["drone", 1], ["photo", 1], ["created_at", "2023-12-11 13:20:53.659475"], ["updated_at", "2023-12-11 13:20:53.659475"]]
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/projects_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/projects/4
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 2643)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:20:53 +0100
+Processing by ProjectsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 5964)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 6871)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:21:01 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5962)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 6861)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:21:07 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 823)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 6708)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6977)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-12-11 14:21:08 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (2) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 5973)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 6874)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-12-11 14:21:23 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 5976)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.2ms | Allocations: 6877)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2023-12-11 14:23:05 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (2) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 5974)
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 6876)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2023-12-11 14:23:11 +0100
+Processing by ProjectsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (Duration: 7.3ms | Allocations: 5571)
+  Rendered projects/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5633)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 11295)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 11571)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:23:17 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 823)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 6710)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 6979)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2023-12-11 14:23:20 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 79)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5979)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 6880)
+
+
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:29:39 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3023)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 19694)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.2ms | Allocations: 20761)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:29:40 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 453)
+
+
+  
+RuntimeError ():
+  
+app/controllers/projects_controller.rb:8:in `show'
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:31:49 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 96)
+  Rendered shared/_header.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 16783)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 22147)
+
+
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:33:26 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 302)
+  Rendered shared/_header.html.erb (Duration: 1.1ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 7815)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.1ms | Allocations: 9101)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `some_path' for #<ActionView::Base:0x000000000405b0>):
+     5:         <%= link_to 'Projects', projects_path, class: 'nav-link active' %>
+     6:       </li>
+     7:       <li class="nav-item">
+     8:         <%= link_to 'Link', some_path, class: 'nav-link' %>
+     9:       </li>
+    10:       <li class="nav-item">
+    11:         <%= link_to 'Another Link', another_path, class: 'nav-link' %>
+  
+app/views/shared/_header.html.erb:8
+app/views/layouts/application.html.erb:14
+Started GET "/projects/4" for 127.0.0.1 at 2023-12-11 14:33:55 +0100
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:8:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 297)
+  Rendered shared/_header.html.erb (Duration: 0.4ms | Allocations: 407)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7234)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 8532)
+
+
+Started GET "/projects" for 127.0.0.1 at 2023-12-11 14:33:58 +0100
+Processing by ProjectsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:3
+  Rendered projects/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1142)
+  Rendered shared/_header.html.erb (Duration: 0.2ms | Allocations: 173)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7215)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 7545)
+
+

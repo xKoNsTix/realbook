@@ -4,3 +4,5 @@
         <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
     <% end%>
 </ul>
+
+<%= link_to 'Create new Project', new_project_path(@project) %>
