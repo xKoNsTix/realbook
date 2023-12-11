@@ -1,0 +1,9 @@
+<%= content_tag :h1, class: "text-light bg-info" do %>
+  Invoice - <%= content_tag :span, "##{@invoice.invoice_num}" %>
+<% end %>
+
+
+<h2>Name: <%= @invoice.customer_name %></h2>
+<h2>Description:</h2>
+<p><%= @invoice.description %></p>
+<h3>Price: <%= @invoice.price %></h3>

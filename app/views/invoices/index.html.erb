@@ -1,6 +1,6 @@
-<h1>Invoices:</h1>
+<h1>Overview of all Invoices</h1>
 <ul class="list-group">
     <% @invoices.each do |i| %>
-        <li class="list-group-item"><%= i.invoice_num %>, <%= i.price %>, <%= i.description %>, <%= i.customer_name %></li>
+        <li class="list-group-item"><%= link_to i.invoice_num, i %>, <%= i.price %>, <%= i.description %>, <%= i.customer_name %></li>
     <% end%>
 </ul>
