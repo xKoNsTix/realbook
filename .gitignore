@@ -1,0 +1,45 @@
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore the cache directory in tmp
+/tmp/cache/*
+
+# Additionally, you might want to ignore:
+# - Database configuration file
+/config/database.yml
+
+# - Environment variables
+/.env
+
+# - Secrets
+/config/secrets.yml
+
+# - Specific files for IDEs/editors
+/.idea/
+*.swp
+*.swo
+*~
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore node modules
+/node_modules/
+
+# Ignore precompiled assets
+/public/assets/
+
+# Ignore bundler config
+/.bundle
+
+# Ignore the default SQLite database.
+# /db/*.sqlite3
+# /db/*.sqlite3-journal
+
+# Ignore pidfiles, and state of the test database.
+/tmp/pids/
+/tmp/capybara/
+/tmp/minitest/
