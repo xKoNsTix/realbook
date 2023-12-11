@@ -1,0 +1,10 @@
+<%= content_tag :h1, class: "text-light bg-info" do %>
+  This is Project - <%= content_tag :span, @project.adress %>
+<% end %>
+<h2>Details:</h2>
+<ul class="list-group">
+    <li class="list-group-item">Date of occurance: <%= @project.date %></li>
+    <li class="list-group-item">Video: <%= @project.video %></li>
+    <li class="list-group-item">Drone: <%= @project.drone %></li>
+    <li class="list-group-item">Photo: <%= @project.photo %></li>
+</ul>

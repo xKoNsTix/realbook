@@ -1,0 +1,6 @@
+<h1>All Projects Listed</h1>
+<ul class="list-group">
+    <% @projects.each do |p| %>
+        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+    <% end%>
+</ul>
