@@ -1,0 +1,6 @@
+<h1>My account</h1>
+<h2>Welcome <%= @user.name %> to your user account, here you will soon be able to make changes</h2>
+<h3><%= @user.email %></h3>
+<% if current_user?(@user) %>
+    <%= link_to "Edit user", edit_user_path(@user) %>
+<% end %>
