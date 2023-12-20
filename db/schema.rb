@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_14_074559) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_20_125919) do
   create_table "invoices", force: :cascade do |t|
     t.integer "invoice_num"
     t.decimal "price"
@@ -29,6 +29,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_14_074559) do
     t.boolean "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,6 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_14_074559) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "admin", default: false
   end
 
+  add_foreign_key "projects", "users"
 end

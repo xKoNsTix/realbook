@@ -1,7 +1,7 @@
 <div class="container">
   <%= form_with(model: project, html: { class: "needs-validation", novalidate: true }) do |form| %>
 
-    <%# <%= render "shared/errors", object: project %>
+    <%= render "shared/errors", object: project %>
 
     <div class="mb-3">
       <%= form.label :adress, class: "form-label" %>

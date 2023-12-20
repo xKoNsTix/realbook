@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+    before_action :require_signin
+
     def index
         @projects = Project.all
     end
@@ -13,24 +15,15 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        @project = Project.create(project_params)
+        @project = Project.new(project_params)
+        @project.user_id = current_user.id
         if @project.save
-            redirect_to project_path(@project), notice: 'Event successfully created!'
+            redirect_to project_path(@project), notice: 'Project successfully created!'
         else
             render :new, status: :unprocessable_entity
         end
     end
-
-    # @event = Event.create(event_params)
-    # if @event.save
-    #   redirect_to event_path(@event), notice: 'Event successfully created!'
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
-
-    # def event_params
-    #     params.require(:event).permit(:name, :description, :location, :price, :starts_at, :capacity, :image_file_name, category_ids: [])
-    #   end
+    
     private
 
     def project_params

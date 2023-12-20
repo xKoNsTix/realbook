@@ -1,8 +1,19 @@
 <h1>All Projects Listed</h1>
-<ul class="list-group">
+<% if is_admin? %>
     <% @projects.each do |p| %>
-        <li class="list-group-item"><%= link_to p.adress, p %>, <%= p.size %>, <%= p.video %>, <%= p.drone %>, <%= p.photo %></li>
+        <div class="container">
+            <h2>Created by <%= p.user.name %></h2>
+            <ul class="list-group">
+                <li class="list-group-item">Adress: <%= link_to p.adress, p %></li>
+                <li class="list-group-item">Size of Property: <%= p.size %></li>
+                <li class="list-group-item">Video: <%= p.video %></li>
+                <li class="list-group-item">Drone: <%= p.drone %></li>
+                <li class="list-group-item">Photo: <%= p.photo %></li>
+            </ul>
+            <br>
+        </div>
     <% end%>
-</ul>
-
-<%= link_to 'Create new Project', new_project_path(@project) %>
+<% end %>
+<% if current_user %>
+    <%= link_to 'Create new Project', new_project_path(@project) %>
+<% end %>

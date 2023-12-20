@@ -15,7 +15,8 @@ class SessionsController < ApplicationController
         end
     end
 
-    def destroy 
-
+    def destroy
+        session[:user_id] = nil
+        redirect_to projects_url, status: :see_other
     end
 end

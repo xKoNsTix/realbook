@@ -4,21 +4,31 @@
       <li class="nav-item">
         <%= link_to 'Projects', projects_path, class: 'nav-link active' %>
       </li>
-      <li class="nav-item">
-        <%= link_to 'Users', users_path, class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Invoices', invoices_path, class: 'nav-link' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Sign In', new_session_path, class: 'nav-link', tabindex: '-1' %>
-      </li>
-      <li class="nav-item">
-        <%= current_user.name %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Sign Out", session_path, data: { turbo_method: :delete }, class: "button" %>
-      </li>
+      <% if is_admin? %>
+        <li class="nav-item">
+          <%= link_to 'Users', users_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+      <% if current_user %>
+          <%= link_to 'Account', user_path(current_user), class: 'nav-link' %>
+      <% end %>
+      <% if is_admin? %>
+        <li class="nav-item">
+          <%= link_to 'Invoices', invoices_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+      <% if !current_user %>
+        <li class="nav-item">
+          <%= link_to 'Sign In', new_session_path, class: 'nav-link', tabindex: '-1' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= current_user.name %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sign Out", session_path, data: { turbo_method: :delete }, class: "button" %>
+        </li>
+      <% end %>
     </ul>
   </nav>
 </header>
